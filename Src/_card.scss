@@ -1,0 +1,151 @@
+body {
+    background-color: $bg-color;
+    font-family: 'poppins';
+}
+
+
+.main_feature {
+
+    @include padding($pd-top: 52px, $pd-bottom: null, $pd-left: null, $pd-right: null);
+
+    &-heading {
+
+        @include font_size_color($color: $primary-light, $font: $font-size-medium, $font_weight: $font-weight-regular, $line_height: null);
+        text-align: center;
+
+        h1 {
+           
+            letter-spacing: 4px;
+            @include font_size_color($color: $primary-light, $font: $font-size-lg, $font_weight: $font-weight-regular, $line_height: null);
+        }
+
+        span {
+            @include font_size_color($color: $secondary-regular, $font: $font-size-lg, $font_weight: $font-weight-regular, $line_height: null);
+        }
+    }
+
+    &-card {
+        @include padding($pd-top: 50px, $pd-bottom: null, $pd-left: null, $pd-right: null);
+        @include flex($flex: flex, $justify: space-evenly, $align_item: null, $wrap: null, $direction: null);
+
+        .left-card {
+            @include flex($flex: flex, $justify: space-between, $align_item: flex-end, $wrap: null, $direction: column);
+        }
+
+        .right-card {
+            @include flex($flex: flex, $justify: space-between, $align_item: flex-start, $wrap: null, $direction: column);
+        }
+
+        &-left,
+        &-right {
+
+            .fa-solid {
+                color: $secondary-regular;
+                @include padding($pd-top: 10px, $pd-bottom: 10px, $pd-left: 10px, $pd-right: 10px);
+                background: $bg-icon;
+                color: $primary-light;
+                border-radius: 50%;
+
+            }
+
+            .fa-solid:hover{
+                animation: shake 0.5s infinite;
+            }
+
+            a {
+                color: $secondary-regular;
+                font-weight: $font-weight-bold;
+                @include padding($pd-top: 10px, $pd-bottom: null, $pd-left: null, $pd-right: null);
+            }
+
+            h2 {
+                @include font_size_color($color: $primary-light, $font: $font-size-medium, $font_weight: $font-weight-bold, $line_height: 48px);
+                letter-spacing: 2px;
+            }
+
+            p {
+                @include font_size_color($color: $dark-text, $font: $font-size-base, $font_weight: $font-weight-base, $line_height: 20px);
+            }
+
+            &-card-1 {
+                @include flex($flex: flex, $justify: null, $align_item: flex-end, $wrap: null, $direction: column);
+                width: 60%;
+                background-color: #161616;
+                margin-bottom: 33px;
+                border-radius: 8px;
+                @include padding($pd-top: 40px, $pd-bottom: 40px, $pd-left: 35px, $pd-right: 15px);
+            }
+
+            &-card-start {
+                @include flex($flex: flex, $justify: null, $align_item: flex-start, $wrap: null, $direction: column);
+            }
+
+            &-card-end {
+                @include flex($flex: flex, $justify: null, $align_item: flex-end, $wrap: null, $direction: column);
+            }
+
+
+
+        }
+    }
+
+}
+
+
+
+
+
+.team_container {
+    position: relative;
+
+    h3 {
+        @include font_size_color($color: $primary-light, $font: $font-size-lg, $font_weight: $font-weight-regular, $line_height: null);
+        text-align: center;
+        letter-spacing: 15px;
+
+    }
+
+    h3:after {
+        @extend %bottom-border;
+    }
+
+    span {
+        color: $secondary-regular;
+        letter-spacing: 2px;
+    }
+
+    &-figure {
+        @include flex($flex: flex, $justify: space-evenly, $align_item: null, $wrap: null, $direction: null);
+        @include padding($pd-top: 50px, $pd-bottom: 40px, $pd-left: 35px, $pd-right: 15px);
+    }
+
+    &-card {
+        text-align: center;
+
+    }
+
+    &-image {
+        width: 22%;
+    }
+
+    &-image:hover {
+        filter: grayscale(1);
+    }
+
+    &-caption {
+        @include font_size_color($color: null, $font: null, $font_weight: null, $line_height: null);
+        @include padding($pd-top: 20px, $pd-bottom: null, $pd-left: null, $pd-right: null);
+    }
+
+    &-title {
+        @include font_size_color($color: $primary-light, $font: $font-size-m-lg, $font_weight: $font-weight-regular, $line_height: null);
+    }
+
+    &-post {
+        @include font_size_color($color: $dark-text, $font: $font-size-base, $font_weight: $font-weight-regular, $line_height: 45px);
+    }
+
+    &-profile {
+        @include font_size_color($color: $secondary-regular, $font: $font-size-regular, $font_weight: $font-weight-bold, $line_height: 16px);
+    }
+}

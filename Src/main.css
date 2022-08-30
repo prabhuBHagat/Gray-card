@@ -1,0 +1,201 @@
+body {
+  font-family: "Ubuntu";
+}
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+.team_container h3:after {
+  content: " ";
+  width: 12%;
+  height: 1px;
+  background-color: #4c4949;
+  position: absolute;
+  display: inline-block;
+  top: 40px;
+  left: 550px;
+  margin-bottom: 6px;
+}
+
+body {
+  background-color: #000;
+  font-family: "poppins";
+}
+
+.main_feature {
+  padding-top: 52px;
+}
+.main_feature-heading {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+.main_feature-heading h1 {
+  letter-spacing: 4px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+}
+.main_feature-heading span {
+  color: #a41616;
+  font-size: 36px;
+  font-weight: 700;
+}
+.main_feature-card {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.main_feature-card .left-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.main_feature-card .right-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.main_feature-card-left .fa-solid, .main_feature-card-right .fa-solid {
+  color: #a41616;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #a41616;
+  color: #fff;
+  border-radius: 50%;
+}
+.main_feature-card-left .fa-solid:hover, .main_feature-card-right .fa-solid:hover {
+  -webkit-animation: shake 0.5s infinite;
+          animation: shake 0.5s infinite;
+}
+.main_feature-card-left a, .main_feature-card-right a {
+  color: #a41616;
+  font-weight: 900;
+  padding-top: 10px;
+}
+.main_feature-card-left h2, .main_feature-card-right h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: 2px;
+}
+.main_feature-card-left p, .main_feature-card-right p {
+  color: #4c4949;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.main_feature-card-left-card-1, .main_feature-card-right-card-1 {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 60%;
+  background-color: #161616;
+  margin-bottom: 33px;
+  border-radius: 8px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 35px;
+  padding-right: 15px;
+}
+.main_feature-card-left-card-start, .main_feature-card-right-card-start {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.main_feature-card-left-card-end, .main_feature-card-right-card-end {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.team_container {
+  position: relative;
+}
+.team_container h3 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 15px;
+}
+.team_container span {
+  color: #a41616;
+  letter-spacing: 2px;
+}
+.team_container-figure {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  padding-left: 35px;
+  padding-right: 15px;
+}
+.team_container-card {
+  text-align: center;
+}
+.team_container-image {
+  width: 22%;
+}
+.team_container-image:hover {
+  filter: grayscale(1);
+}
+.team_container-caption {
+  padding-top: 20px;
+}
+.team_container-title {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+}
+.team_container-post {
+  color: #4c4949;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 45px;
+}
+.team_container-profile {
+  color: #a41616;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 16px;
+}/*# sourceMappingURL=main.css.map */
